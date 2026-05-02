@@ -1,0 +1,24 @@
+# Cek apakah endpoint berjalan
+GET http://127.0.0.1:5000/
+
+###
+
+# Generate cerita baru
+POST http://127.0.0.1:5000/stories/generate
+Content-Type: application/json
+
+{
+  "theme": "petualangan di hutan",
+  "genre": "fiksi",
+  "length": "pendek"
+}
+
+###
+
+# Ambil semua cerita (halaman 1)
+GET http://127.0.0.1:5000/stories?page=1&per_page=5
+
+###
+
+# Hapus cerita berdasarkan ID (ganti 1 dengan ID yang ada)
+DELETE http://127.0.0.1:5000/stories/1
